@@ -57,10 +57,8 @@ const Header = () => {
 
                   <button
                     className="px-4 py-2.5 bg-blue-600 font-medium
-                    text-xs leading-tight uppercase rounded-full text-white 
-                    shadow-md hover:bg-blue-700 hover:shadow-lg
-                    focus:bg-blue-700 focus:shadow-lg focus:outline-none
-                    focus:ring-0 active:bg-blue-800 active:shadow-lg
+                    text-sm leading-tight uppercase rounded-full text-white 
+                    shadow-md shadow-gray-400 active:bg-blue-800 dark:shadow-gray-700
                     transition duration-150 ease-in-out dark:text-blue-500
                     dark:border dark:border-blue-500 dark:bg-transparent"
                     
