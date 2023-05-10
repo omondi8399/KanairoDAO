@@ -1,8 +1,11 @@
 import React from 'react'
+import ProposalDetails from '../components/ProposalDetails'
 
 const Proposal = () => {
   return (
-    <div>Proposal</div>
+    <>
+    <ProposalDetails />
+    </>
   )
 }
 
