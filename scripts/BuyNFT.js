@@ -1,4 +1,4 @@
-const Adulam = artifacts.require('Adulam')
+const Rodgers = artifacts.require('Rodgers')
 
 const toWei = (num) => web3.utils.toWei(num.toString())
 const fromWei = (num) => web3.utils.fromWei(num.toString())
@@ -11,7 +11,7 @@ module.exports = async (callback) => {
   const DESCRIPTION =
     'engineer efficient solutions with this NFT, created for Public-key'
 
-  const adulam = await Adulam.deployed()
+  const rodgers = await Rodgers.deployed()
 
   let deployerBal = await web3.eth.getBalance(deployer)
   let buyer1Bal = await web3.eth.getBalance(buyer1)
@@ -31,7 +31,7 @@ module.exports = async (callback) => {
 
   console.log(`Minting NFT for buyer1...\n`)
 
-  await adulam.payToMint(TITLE, DESCRIPTION, { from: buyer1, value: COST })
+  await rodgers.payToMint(TITLE, DESCRIPTION, { from: buyer1, value: COST })
 
   console.log(`Balance after NFT minting!\n`)
   deployerBal = await web3.eth.getBalance(deployer)
@@ -52,7 +52,7 @@ module.exports = async (callback) => {
 
   console.log(`Newly Minted Token Details!\n`)
 
-  const balance = await adulam.balanceOf(buyer1)
+  const balance = await rodgers.balanceOf(buyer1)
   console.log(`Buyer1 has ${balance} tokens...\n`)
 
   callback()
